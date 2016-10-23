@@ -274,6 +274,7 @@ GameObject:
   - 114: {fileID: 685363527}
   - 114: {fileID: 685363526}
   - 114: {fileID: 685363529}
+  - 114: {fileID: 685363530}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -336,6 +337,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac00ffd911eaed4a95c3e94d9c1a450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &685363530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685363525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c1fd2ccb6e3e5449429462b44a8229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardSelectKey: 32
+  MouseSelectButton: 1
 --- !u!1 &868271204
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +360,7 @@ GameObject:
   - 4: {fileID: 868271205}
   - 114: {fileID: 868271206}
   - 23: {fileID: 868271207}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,6 +434,7 @@ GameObject:
   - 33: {fileID: 970592371}
   - 23: {fileID: 970592370}
   - 114: {fileID: 970592369}
+  - 64: {fileID: 970592372}
   m_Layer: 0
   m_Name: TriPyr
   m_TagString: Untagged
@@ -494,6 +509,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 970592367}
+  m_Mesh: {fileID: 0}
+--- !u!64 &970592372
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970592367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 0}
 --- !u!1 &1023810216
 GameObject:
@@ -618,6 +645,7 @@ GameObject:
   - 33: {fileID: 1198372816}
   - 23: {fileID: 1198372815}
   - 114: {fileID: 1198372814}
+  - 64: {fileID: 1198372817}
   m_Layer: 0
   m_Name: TriPyr
   m_TagString: Untagged
@@ -693,6 +721,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198372812}
   m_Mesh: {fileID: 0}
+--- !u!64 &1198372817
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198372812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
 --- !u!1 &1525743165
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +744,7 @@ GameObject:
   - 33: {fileID: 1525743169}
   - 23: {fileID: 1525743168}
   - 114: {fileID: 1525743167}
+  - 64: {fileID: 1525743170}
   m_Layer: 0
   m_Name: TriPyr
   m_TagString: Untagged
@@ -779,6 +820,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1525743165}
   m_Mesh: {fileID: 0}
+--- !u!64 &1525743170
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525743165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
 --- !u!1 &1825450461
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +843,7 @@ GameObject:
   - 33: {fileID: 1825450465}
   - 23: {fileID: 1825450464}
   - 114: {fileID: 1825450463}
+  - 64: {fileID: 1825450466}
   m_Layer: 0
   m_Name: TriPyr
   m_TagString: Untagged
@@ -865,6 +919,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825450461}
   m_Mesh: {fileID: 0}
+--- !u!64 &1825450466
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825450461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1965566259
 Prefab:
   m_ObjectHideFlags: 0
@@ -917,7 +983,7 @@ GameObject:
   - 4: {fileID: 2079315558}
   - 114: {fileID: 2079315559}
   - 23: {fileID: 2079315560}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
