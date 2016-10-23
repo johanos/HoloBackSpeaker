@@ -22,3 +22,7 @@ ExportedObj/
 *.pidb.meta
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+# Python files
+.DS_Store
+*.pyc
+settings.py
