@@ -132,6 +132,8 @@ public class BuildMesh : MonoBehaviour {
         mesh.uv = uvs;
         mesh.Optimize();
         mesh.RecalculateNormals();
+        MeshCollider collider = gameObject.GetComponent<MeshCollider>();
+        collider.sharedMesh = mesh;
 
 	}
 	
