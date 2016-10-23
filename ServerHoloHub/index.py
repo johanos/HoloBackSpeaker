@@ -1,6 +1,6 @@
 import json
 import requests
-from flask import Flask, url_for
+from flask import Flask, url_for, request, Response
 from soco import SoCo
 
 app = Flask(__name__)
@@ -34,47 +34,62 @@ def get_track_image(artist, album):
 @app.route("/play")
 def play():
     sonos.play()
-    return 'Ok'
+    resp = Response('Playing', status=200)
+    return resp
 
 
 @app.route("/pause")
 def pause():
     sonos.pause()
-    return 'Ok'
+    resp = Response('Paused', status=200)
+    return resp
 
 
 @app.route("/next")
 def next():
     sonos.next()
-    return 'Ok'
+    resp = Response('Skipped', status=200)
+    return resp
 
 
 @app.route("/previous")
 def previous():
-    return 'Ok'
+    sonos.previous()
+    resp = Response('Replaying', status=200)
+    return resp
 
 
-sonos.previous()
-@app.route("/info-light")
-def info_light():
-    track = sonos.get_current_track_info()
-    return json.dumps(track)
+@app.route("/volume")
+def volume():
+    try:
+        volumeNumber = int(request.args.get('value'))
+    except:
+        resp = Response('Incorrect request format.', status=400)
+        return resp
+
+    if volumeNumber > 100:
+        volumeNumber=100
+    sonos.volume = volumeNumber
+    resp = Response('Volume Changed', status=200)
+    return resp
+
+
+
 
 
 @app.route("/info")
 def info():
     track = sonos.get_current_track_info()
     track['image'] = get_track_image(track['artist'], track['album'])
-    return json.dumps(track)
+    resp = Response(json.dumps(track), status=200)
+    return resp
 
 
 @app.route("/")
 def index():
-    return 'Connected'
-    # track = sonos.get_current_track_info()
-    # track['image'] = get_track_image(track['artist'], track['album'])
-    # return render_template('index.html', track=track)
+    resp = Response('Connected', status=200)
+    return resp
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
