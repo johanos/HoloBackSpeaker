@@ -340,7 +340,7 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   metroPackageName: HoloBackSpeaker
   metroPackageVersion: 
-  metroCertificatePath: C:\Users\johan\Desktop\Development\HoloBackSpeaker\HoloBackSpeaker\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
